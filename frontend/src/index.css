@@ -1,0 +1,141 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body{
+  margin: 0;
+  padding:0;
+  background:#05101c;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+
+.image-inverted{
+  filter: invert(100%);
+}
+.nav-link{
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.MuiOutlinedInput-input-root.Mui-focused,
+.MuiOutlinedInput-notchedOutline{
+  border-color: white !important;
+}
+
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #05101c;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Full-screen glow effect when recording */
+.app-container.active {
+  background-color: rgba(255, 59, 48, 0.1);
+  animation: glowEffect 2s infinite;
+}
+
+@keyframes glowEffect {
+  0% {
+    background-color: rgba(255, 59, 48, 0.1);
+  }
+  50% {
+    background-color: rgba(255, 59, 48, 0.3);
+  }
+  100% {
+    background-color: rgba(255, 59, 48, 0.1);
+  }
+}
+
+/* Input Box Styling */
+.input-section {
+  margin-top: -30px; /* Adjusted to ensure input is visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+input {
+  width: 90%;
+  max-width: 800px;
+  background-color: #2d3748;
+  padding: 15px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border: 2px solid #3b82f6;
+  background-color: #1a202c;
+}
+
+/* Glow Effect on Buttons */
+.speech-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.speech-button,
+.send-button {
+  background-color: #3b82f6;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.speech-button:hover,
+.send-button:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+}
+
+/* Active State for Speech Button */
+.speech-button.active {
+  background-color: #ff3b30;
+  box-shadow: 0 0 25px rgba(255, 59, 48, 0.8);
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none; /* Prevent interfering with mouse events */
+}
+
+.button-container:hover .hover-text {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.button-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
