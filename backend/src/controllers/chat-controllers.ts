@@ -8,7 +8,6 @@ import mongoose from "mongoose";
 export const generateChatCompletion= async(req, res, next)=>{
     const { message } = req.body;
   const user = await User.findById(res.locals.jwtData.id);
- //console.log(res.locals.jwtData.id);
   if (!user)
     return res.status(401).json({ message: "User not registered or Token malfunctioned" });
 
@@ -38,17 +37,13 @@ export const generateChatCompletion= async(req, res, next)=>{
     };
 
     const chatSession = model.startChat({ generationConfig });
-    // Convert your existing chat history to the format expected by Gemini
     const geminiHistory = chats.map(({ role, content }) => ({
       author: role === 'user' ? 'USER' : 'BOT',
       content: content,
     }));
-   //console.log(geminiHistory);
    const result = await chatSession.sendMessage(
     geminiHistory.map(({ content }) => content)
   );
-  //console.log(result)
-  //const responseText = result?.response?.text;
 
   // Check if the response text is valid
   const responseText = result?.response?.text
@@ -57,17 +52,14 @@ export const generateChatCompletion= async(req, res, next)=>{
   
       user.chats.push({ content: responseText, role: 'assistant' });
       await user.save();
-//console.log(responseText);
     return res
     .status(200).json({ message: responseText , chats:user.chats});
 
   } catch (error) {
-    // Log the full error to identify more details
     console.error("Error with Gemini API:", error);
 
     // Specific error handling based on the error type
     if (error.response) {
-      // If Gemini API provides a response, log it
       console.error("Gemini API Error Response:", error.response.data);
       return res.status(500).json({
         message: "Error communicating with Gemini API.",
