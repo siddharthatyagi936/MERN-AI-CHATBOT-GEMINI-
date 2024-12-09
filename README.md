@@ -5,16 +5,16 @@ This project is a fully-functional AI chatbot built using the MERN stack (MongoD
 
 #  Features
 1. Interactive Chatbot
-*    The chatbot provides intelligent responses using the Google Gemini API, ensuring accurate and context-aware interactions.
+  *  The chatbot provides intelligent responses using the Google Gemini API, ensuring accurate and context-aware interactions.
 2. Speech-to-Text Functionality
-*    Users can interact using their voice, and the application will transcribe the audio input into text seamlessly.
+  *  Users can interact using their voice, and the application will transcribe the audio input into text seamlessly.
 3. User Authentication
-*    Secure login and signup using JWT authentication.
+  *  Secure login and signup using JWT authentication.
      Ensures only authorized users can access the application.
 4. Real-Time Interaction
-*    Chat updates dynamically without page refresh for a smooth user experience.
+  *  Chat updates dynamically without page refresh for a smooth user experience.
 5. Backend Management
- *   Efficient backend services to handle API requests, user authentication, and data storage.
+  *  Efficient backend services to handle API requests, user authentication, and data storage.
 # Tech Stack
 * Frontend: React.js
 * Backend: Node.js, Express.js
