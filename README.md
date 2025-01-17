@@ -3,6 +3,14 @@
  # Project Overview
 This project is a fully-functional AI chatbot built using the MERN stack (MongoDB, Express.js, React, Node.js). It leverages Google Gemini API for advanced AI responses and incorporates Speech-to-Text functionality to enable seamless voice-based interactions. Additionally, the application is secured using JWT (JSON Web Token) authentication to ensure data privacy and secure communication.
 
+# Setup .env file
+
+        GEMINI_API_KEY=
+        MONGODB_URL=
+        JWT_SECRET=
+        COOKIE_SECRET=
+        PORT = 
+
 #  Features
 1. Interactive Chatbot
     *  The chatbot provides intelligent responses using the Google Gemini API, ensuring accurate and context-aware interactions.
