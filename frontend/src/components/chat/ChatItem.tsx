@@ -37,7 +37,7 @@ const ChatItem = ({
    <Box sx={{display:'flex',p:2, bgcolor: "#004d5612" ,my:2, gap: 2 }}
   >
       <Avatar sx={{ml:"0"}}>
-        <img src="openai.png" alt="openai" width={"30px"}/>
+        <img src="sai.jpeg" alt="sai" width={"30px"}/>
       </Avatar>
     <Box>
       {!messageBlocks && (
