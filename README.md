@@ -36,4 +36,5 @@ This project is a fully-functional AI chatbot built using the MERN stack (MongoD
 * Authentication: JWT for secure user management
 
 
+ # Main Page
 ![Screenshot 2024-12-17 155506](https://github.com/user-attachments/assets/6bd64004-09de-40c2-bb4c-02d02badc741)
