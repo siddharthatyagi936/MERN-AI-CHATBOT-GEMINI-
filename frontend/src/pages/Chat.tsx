@@ -161,7 +161,7 @@ const Chat = () => {
         </Box>
         <Box sx={{ display: "flex", flex: { md: 0.8, xs: 1, sm: 1 }, flexDirection: "column", px: 3 }}>
           <Typography sx={{ fontSize: "40px", color: "white", mb: 2, mx: "auto", fontWeight: "600" }}>
-            Model - BOT 4 Gemini
+            S.A.I-Bot
           </Typography>
           <Box ref={chatBoxRef} sx={{ width: "100%", height: "60vh", borderRadius: 3, mx: "auto", display: "flex", flexDirection: "column", overflow: "scroll", overflowX: "hidden", overflowY: "auto", scrollBehavior: "smooth" }}>
             {chatMessages.map((chat, index) => (
